@@ -68,7 +68,7 @@ export default function SellVoucher() {
                         <span className="text-white font-medium text-xs sm:text-sm 2xl:text-lg">
                         </span>
                         <Button 
-                          className="bg-[#2563eb] hover:bg-[#2563eb]/90 text-white text-xs sm:text-sm 2xl:text-base px-3 sm:px-4 2xl:px-6 py-1.5 sm:py-2 2xl:py-3 rounded-full transition-all duration-300"
+                          className="bg-[green-600] hover:bg-[green-600]/90 text-white text-xs sm:text-sm 2xl:text-base px-3 sm:px-4 2xl:px-6 py-1.5 sm:py-2 2xl:py-3 rounded-full transition-all duration-300"
                           onClick={() => handleSellVoucher(product.id.toString(), product.name)}
                         >
                           Jual Voucher
@@ -77,7 +77,7 @@ export default function SellVoucher() {
                     </div>
                   </div>
                   <CardContent className="p-3 sm:p-4 2xl:p-6">
-                    <h3 className="font-semibold text-base sm:text-lg 2xl:text-2xl mb-1 line-clamp-1 group-hover:text-[#2563eb] transition-colors duration-200">
+                    <h3 className="font-semibold text-base sm:text-lg 2xl:text-2xl mb-1 line-clamp-1 group-hover:text-[green-600] transition-colors duration-200">
                       {product.name}
                     </h3>
                     <p className="text-xs sm:text-sm 2xl:text-lg text-gray-500 line-clamp-2">

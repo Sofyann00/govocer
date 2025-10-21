@@ -106,7 +106,7 @@ export default function DashboardPage() {
                   key={s}
                   className={`flex-1 text-center ${
                     s === step
-                      ? "text-[#2563eb] font-semibold"
+                      ? "text-[green-600] font-semibold"
                       : s < step
                       ? "text-green-500"
                       : "text-gray-400"
@@ -115,7 +115,7 @@ export default function DashboardPage() {
                   <div
                     className={`w-8 h-8 mx-auto rounded-full flex items-center justify-center mb-2 ${
                       s === step
-                        ? "bg-[#2563eb] text-white"
+                        ? "bg-[green-600] text-white"
                         : s < step
                         ? "bg-green-500 text-white"
                         : "bg-gray-200"
@@ -204,14 +204,14 @@ export default function DashboardPage() {
               {step < 3 ? (
                 <Button
                   onClick={handleNext}
-                  className="w-24 ml-auto bg-[#2563eb] hover:bg-[#2563eb]/90"
+                  className="w-24 ml-auto bg-[green-600] hover:bg-[green-600]/90"
                 >
                   Next
                 </Button>
               ) : (
                 <Button
                   onClick={handleSubmit}
-                  className="w-24 ml-auto bg-[#2563eb] hover:bg-[#2563eb]/90"
+                  className="w-24 ml-auto bg-[green-600] hover:bg-[green-600]/90"
                 >
                   Create
                 </Button>

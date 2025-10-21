@@ -95,14 +95,14 @@ export function SellVoucherDialog({ isOpen, onClose, gameId, gameName }: SellVou
             <Button
               onClick={handleSubmit}
               disabled={isSubmitting || !voucherCode}
-              className="bg-[#2563eb] hover:bg-[#2563eb]/90"
+              className="bg-[green-600] hover:bg-[green-600]/90"
             >
               {isSubmitting ? "Memvalidasi..." : "Validasi Voucher"}
             </Button>
           ) : (
             <Button
               onClick={handleClose}
-              className="bg-[#2563eb] hover:bg-[#2563eb]/90"
+              className="bg-[green-600] hover:bg-[green-600]/90"
             >
               {validationResult.isValid ? "Selesai" : "Coba Lagi"}
             </Button>

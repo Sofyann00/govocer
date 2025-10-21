@@ -249,73 +249,121 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 text-gray-900 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative mt-20 sm:mt-28 mb-12 sm:mb-16">
-        <div className="w-full mx-auto max-w-[1920px]">
-          <Slider
-            {...sliderSettings}
-            className="h-full [&_.slick-list]:h-full [&_.slick-dots]:bottom-[-36px] [&_.slick-prev]:left-3 sm:[&_.slick-prev]:left-6 [&_.slick-next]:right-3 sm:[&_.slick-next]:right-6 [&_.slick-prev]:z-10 [&_.slick-next]:z-10 [&_.slick-prev]:bg-white/20 [&_.slick-next]:bg-white/20 [&_.slick-prev]:backdrop-blur-sm [&_.slick-next]:backdrop-blur-sm [&_.slick-prev]:rounded-xl [&_.slick-next]:rounded-xl [&_.slick-prev]:w-9 [&_.slick-next]:w-9 sm:[&_.slick-prev]:w-11 sm:[&_.slick-next]:w-11 [&_.slick-prev]:h-9 [&_.slick-next]:h-9 sm:[&_.slick-prev]:h-11 sm:[&_.slick-next]:h-11 [&_.slick-prev]:flex [&_.slick-next]:flex [&_.slick-prev]:items-center [&_.slick-next]:items-center [&_.slick-prev]:justify-center [&_.slick-next]:justify-center [&_.slick-prev]:hover:bg-white/30 [&_.slick-next]:hover:bg-white/30 [&_.slick-prev]:transition-all [&_.slick-next]:transition-all [&_.slick-prev]:duration-300 [&_.slick-next]:duration-300"
-          >
-            {heroSlides.map((slide) => (
-              <div key={slide.key} className="relative aspect-[16/9] sm:aspect-[21/9]">
-                <img src={slide.bg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-                <div className="absolute inset-0 ring-1 ring-white/10" />
-                <div className="relative z-10 h-full flex items-center">
-                  <div className="px-4 sm:px-8 md:px-12 lg:px-16 w-full sm:max-w-xl lg:max-w-2xl">
-                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-white border border-white/20 backdrop-blur-sm text-xs sm:text-sm mb-4">
-                      Populer • Pilihan Gamer
-                    </span>
-                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-extrabold text-white tracking-tight leading-tight drop-shadow-xl">
-                      {slide.title}
-                    </h1>
-                    <p className="mt-3 sm:mt-4 text-white/90 text-sm sm:text-lg md:text-xl 2xl:text-2xl leading-relaxed max-w-2xl">
-                      {slide.subtitle}
-                    </p>
-                    <div className="mt-6 flex flex-wrap gap-3">
-                      <Button
-                        className="bg-[#2563eb] hover:bg-[#2563eb]/90 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg hover:shadow-blue-600/20 transition-all hover:-translate-y-0.5"
-                        onClick={scrollToServices}
-                      >
-                        Belanja Sekarang
-                      </Button>
-                      {/* <Link href="/marketplace">
-                        <Button
-                          className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl backdrop-blur-md transition-all"
-                        >
-                          Jelajahi Marketplace
-                        </Button>
-                      </Link> */}
-                    </div>
-                  </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section - Modern Card Layout */}
+      <section className="pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium">
+                  <Sparkles className="w-4 h-4" />
+                  Platform Terpercaya
+                </div>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  Top Up Game
+                  <span className="block text-green-600">Mudah & Cepat</span>
+                </h1>
+                <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                  Beli voucher game favoritmu dengan harga terbaik. Proses instan, pembayaran aman, dan garansi 100% legal.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  onClick={scrollToServices}
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  Mulai Belanja
+                </Button>
+                {/* <Button
+                  variant="outline"
+                  className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300"
+                >
+                  Lihat Produk
+                </Button> */}
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 pt-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">50K+</div>
+                  <div className="text-sm text-gray-600">Pelanggan</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">99%</div>
+                  <div className="text-sm text-gray-600">Kepuasan</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">24/7</div>
+                  <div className="text-sm text-gray-600">Support</div>
                 </div>
               </div>
-            ))}
-          </Slider>
+            </div>
+
+            {/* Right Content - Game Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              {heroSlides.slice(0, 4).map((slide, index) => (
+                <div key={slide.key} className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${index === 0 ? 'col-span-2' : ''}`}>
+                  <img 
+                    src={slide.bg} 
+                    alt={slide.title}
+                    className="w-full h-32 sm:h-40 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-white font-bold text-sm sm:text-base mb-1">{slide.title}</h3>
+                    <p className="text-white/80 text-xs">{slide.subtitle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Featured Products Section */}
-      <section ref={servicesRef} className="py-16 sm:py-20 md:py-28 2xl:py-36 mt-8 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-indigo-50/30" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="w-full mx-auto max-w-[1920px] px-4 sm:px-6 2xl:px-8">
-          <div className="text-center mb-12 sm:mb-20 2xl:mb-28">
-            <div className="inline-block relative">
-              <span className="inline-block px-6 sm:px-8 2xl:px-10 py-3 sm:py-4 2xl:py-5 bg-gradient-to-r from-[#2563eb]/10 to-blue-600/10 text-[#2563eb] rounded-2xl text-sm sm:text-base 2xl:text-xl font-semibold mb-4 sm:mb-6 2xl:mb-8 border border-[#2563eb]/30 shadow-lg backdrop-blur-sm">
-                ✨ Produk Unggulan
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-bold mb-6 sm:mb-8 2xl:mb-10">
-              <span className="bg-gradient-to-r from-[#2563eb] via-blue-600 to-indigo-600 bg-clip-text text-transparent">Voucher Game Terpopuler</span>
+      {/* Features Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Mengapa Pilih Govocer?
             </h2>
-            <p className="text-lg sm:text-xl 2xl:text-3xl text-gray-700 max-w-3xl 2xl:max-w-5xl mx-auto px-4 leading-relaxed">
-              Pilih dari berbagai macam voucher digital dan kredit game yang kami sediakan dengan harga terbaik
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Platform terpercaya untuk semua kebutuhan gaming Anda
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {marketplaceFeatures.map((feature, index) => (
+              <div key={index} className="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 bg-green-100 rounded-xl group-hover:bg-green-200 transition-colors">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900">{feature.name}</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section ref={servicesRef} className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Produk Terpopuler
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Voucher game favorit dengan harga terbaik
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 sm:gap-8 md:gap-10 2xl:gap-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {products.map((product) => {
               const isHighlighted = product.name.toLowerCase().includes('mobile legends') || 
                     product.name.toLowerCase().includes('free fire diamonds') ||
@@ -323,45 +371,44 @@ export default function Home() {
                     product.name.toLowerCase().includes('ragnarok m classic');
 
               return (
-                <div key={product.id} className={`relative ${!isHighlighted && 'cursor-not-allowed'}`}>
+                <div key={product.id} className={`group relative ${!isHighlighted && 'cursor-not-allowed'}`}>
                   {!isHighlighted && (
-                    <div className="absolute inset-0 bg-black/50 z-10 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-medium text-sm sm:text-base 2xl:text-lg px-4 py-2 bg-black/50 rounded-full">
+                    <div className="absolute inset-0 bg-black/50 z-10 rounded-2xl flex items-center justify-center">
+                      <span className="text-white font-medium text-sm px-4 py-2 bg-black/50 rounded-full">
                         Coming Soon
                       </span>
                     </div>
                   )}
                   <Link href={isHighlighted ? `/products/${product.id}` : '#'} className={!isHighlighted ? 'pointer-events-none' : ''}>
-                    <Card className={`group cursor-pointer bg-white/90 backdrop-blur-sm border-gray-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 ${!isHighlighted && 'opacity-50'}`}>
+                    <div className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden ${!isHighlighted && 'opacity-50'}`}>
                       <div className="relative aspect-[4/3] w-full overflow-hidden">
                         <Image
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+                          className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 2xl:p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                          <div className="flex items-center justify-between">
-                            <span className="text-white font-medium text-xs sm:text-sm 2xl:text-lg">
-                              {formatPrice(product.price)}
-                            </span>
-                            <Button className="bg-gradient-to-r from-[#2563eb] to-blue-600 hover:from-blue-600 hover:to-indigo-600 text-white text-xs sm:text-sm 2xl:text-base px-5 sm:px-6 2xl:px-7 py-2.5 sm:py-3 2xl:py-4 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-[#2563eb]/30 hover:-translate-y-1 hover:scale-105">
-                              Lihat Detail
-                            </Button>
+                        <div className="absolute top-4 right-4">
+                          <div className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            {formatPrice(product.price)}
                           </div>
                         </div>
                       </div>
-                      <CardContent className="p-4 sm:p-6 2xl:p-8">
-                        <h3 className="font-bold text-lg sm:text-xl 2xl:text-3xl mb-2 line-clamp-1 group-hover:text-[#2563eb] transition-colors duration-300">
+                      <div className="p-6">
+                        <h3 className="font-bold text-lg text-gray-900 mb-2 line-clamp-1 group-hover:text-green-600 transition-colors">
                           {product.name}
                         </h3>
-                        <p className="text-sm sm:text-base 2xl:text-xl text-gray-600 line-clamp-2 leading-relaxed">
+                        <p className="text-sm text-gray-600 line-clamp-2 mb-4">
                           {product.description}
                         </p>
-                      </CardContent>
-                    </Card>
+                        <Button 
+                          className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl font-semibold transition-all duration-300"
+                          disabled={!isHighlighted}
+                        >
+                          {isHighlighted ? 'Beli Sekarang' : 'Coming Soon'}
+                        </Button>
+                      </div>
+                    </div>
                   </Link>
                 </div>
               );
@@ -370,72 +417,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* QnA Section */}
-      <section className="py-16 sm:py-20 md:py-28 2xl:py-36 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/40 via-transparent to-blue-50/30" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="max-w-5xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 2xl:px-8">
-          <div className="text-center mb-12 sm:mb-20 2xl:mb-28">
-            <div className="inline-block relative">
-              <span className="inline-block px-6 sm:px-8 2xl:px-10 py-3 sm:py-4 2xl:py-5 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 text-indigo-600 rounded-2xl text-sm sm:text-base 2xl:text-xl font-semibold mb-4 sm:mb-6 2xl:mb-8 border border-indigo-200/50 shadow-lg backdrop-blur-sm">
-                ❓ Pertanyaan Umum
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-bold mb-6 sm:mb-8 2xl:mb-10">
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">Frequently Asked Questions</span>
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Pertanyaan Umum
             </h2>
-            <p className="text-lg sm:text-xl 2xl:text-3xl text-gray-700 max-w-3xl 2xl:max-w-5xl mx-auto px-4 leading-relaxed">
-              Temukan jawaban untuk pertanyaan yang sering diajukan tentang layanan kami
+            <p className="text-lg text-gray-600">
+              Jawaban untuk pertanyaan yang sering diajukan
             </p>
           </div>
 
-          <div className="space-y-4 sm:space-y-6 2xl:space-y-8">
+          <div className="space-y-4">
             {qnaList.map((qna, idx) => (
-              <div 
-                key={qna.question} 
-                className="group relative"
-              >
+              <div key={qna.question} className="border border-gray-200 rounded-2xl overflow-hidden">
                 <button
-                  className={`w-full flex items-center justify-between p-6 sm:p-8 2xl:p-10 text-lg sm:text-xl md:text-2xl 2xl:text-3xl font-bold rounded-2xl sm:rounded-3xl 2xl:rounded-[2rem] transition-all duration-500 ${
+                  className={`w-full flex items-center justify-between p-6 text-left transition-all duration-300 ${
                     openQna === idx 
-                      ? "bg-white/95 backdrop-blur-lg shadow-2xl border border-indigo-200/50 hover:shadow-3xl" 
-                      : "bg-white/70 hover:bg-white/90 border border-gray-200/50 hover:shadow-xl hover:-translate-y-1"
+                      ? "bg-green-50 border-green-200" 
+                      : "bg-white hover:bg-gray-50"
                   }`}
                   onClick={() => setOpenQna(openQna === idx ? null : idx)}
                 >
-                  <div className="flex items-center gap-3 sm:gap-4 2xl:gap-6">
-                    <div className={`w-8 h-8 sm:w-10 sm:h-10 2xl:w-14 2xl:h-14 rounded-2xl flex items-center justify-center transition-all duration-500 ${
-                      openQna === idx 
-                        ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg" 
-                        : "bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-600 hover:from-indigo-200 hover:to-purple-200"
-                    }`}>
-                      <span className="text-sm sm:text-lg 2xl:text-2xl font-bold">{idx + 1}</span>
-                    </div>
-                    <span className="text-left font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300 text-base sm:text-lg md:text-xl 2xl:text-2xl">
-                      {qna.question}
-                    </span>
-                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                    {qna.question}
+                  </h3>
                   <ChevronRight 
-                    className={`ml-4 h-6 w-6 sm:h-8 sm:w-8 2xl:h-10 2xl:w-10 transition-all duration-500 ${
-                      openQna === idx 
-                        ? "rotate-90 text-indigo-600" 
-                        : "text-gray-500 group-hover:text-indigo-500"
+                    className={`h-5 w-5 text-gray-500 transition-transform duration-300 ${
+                      openQna === idx ? "rotate-90" : ""
                     }`} 
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    openQna === idx ? "max-h-[600px] 2xl:max-h-[900px] opacity-100" : "max-h-0 opacity-0"
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openQna === idx ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="p-6 sm:p-8 2xl:p-10 pt-4 sm:pt-6 2xl:pt-8 bg-gradient-to-br from-white/80 to-indigo-50/50 backdrop-blur-sm rounded-b-2xl sm:rounded-b-3xl 2xl:rounded-b-[2rem] border-x border-b border-indigo-200/30 shadow-lg">
-                    <div className="flex items-start gap-4 sm:gap-6 2xl:gap-8">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 2xl:w-14 2xl:h-14 rounded-2xl bg-gradient-to-r from-green-100 to-emerald-100 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 2xl:w-8 2xl:h-8 text-green-600" />
-                      </div>
-                      <div className="text-base sm:text-lg 2xl:text-2xl text-gray-700 leading-relaxed font-medium">
-                        {qna.answer}
-                      </div>
+                  <div className="p-6 pt-0 bg-green-50/50">
+                    <div className="text-gray-700 leading-relaxed">
+                      {qna.answer}
                     </div>
                   </div>
                 </div>
@@ -443,54 +464,53 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-12 sm:mt-16 2xl:mt-20 text-center">
-            <p className="text-base sm:text-lg 2xl:text-2xl text-gray-600 mb-6 sm:mb-8 2xl:mb-10 font-medium">Masih punya pertanyaan?</p>
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-6">Masih punya pertanyaan?</p>
             <a
               href="https://wa.me/6285811959392"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 sm:px-10 2xl:px-12 py-4 sm:py-5 2xl:py-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl text-base sm:text-lg 2xl:text-2xl font-bold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1 hover:scale-105"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-white text-green-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1"
             >
-              <img src="/wa_img.png" alt="WhatsApp" className="w-6 h-6 sm:w-8 sm:h-8 2xl:w-10 2xl:h-10" />
-              💬 Chat dengan Kami
+              <img src="/wa_img.png" alt="WhatsApp" className="w-5 h-5 filter-green" />
+              Chat dengan Kami
             </a>
           </div>
         </div>
       </section>
 
-      {/* Sell Voucher Section */}
-      <section className="py-16 sm:py-20 md:py-28 2xl:py-36 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50/40 via-transparent to-pink-50/30" />
-        <div className="max-w-5xl 2xl:max-w-7xl mx-auto px-4 sm:px-6 2xl:px-8">
-          <div className="text-center mb-8 sm:mb-12 2xl:mb-16">
-            <div className="inline-block relative">
-              <span className="inline-block px-6 sm:px-8 2xl:px-10 py-3 sm:py-4 2xl:py-5 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-purple-600 rounded-2xl text-sm sm:text-base 2xl:text-xl font-semibold mb-4 sm:mb-6 2xl:mb-8 border border-purple-200/50 shadow-lg backdrop-blur-sm">
-                💰 Jual Voucher Game
-              </span>
-            </div>
-            <p className="text-lg sm:text-xl 2xl:text-3xl text-gray-700 max-w-3xl 2xl:max-w-5xl mx-auto px-4 leading-relaxed font-medium">
-              Tukar voucher game yang tidak terpakai menjadi uang tunai. Proses cepat, aman, dan terpercaya.
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-lg">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Jual Voucher Game Anda
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Punya voucher game yang tidak terpakai? Tukar dengan uang tunai sekarang juga!
             </p>
-          </div>
-
-          <div className="flex justify-center">
-            {user ? (
-              <Link href="/sell-voucher">
-                <Button 
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-base sm:text-lg 2xl:text-2xl px-8 sm:px-10 2xl:px-12 py-4 sm:py-5 2xl:py-6 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1 hover:scale-105 font-bold"
-                >
-                  💰 Jual Sekarang
-                </Button>
-              </Link>
-            ) : (
-              <Link href="/login">
-                <Button 
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-base sm:text-lg 2xl:text-2xl px-8 sm:px-10 2xl:px-12 py-4 sm:py-5 2xl:py-6 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1 hover:scale-105 font-bold"
-                >
-                  🔐 Login untuk Jual Voucher
-                </Button>
-              </Link>
-            )}
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {user ? (
+                <Link href="/sell-voucher">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    Jual Sekarang
+                  </Button>
+                </Link>
+              ) : (
+                <Link href="/login">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    Login untuk Jual
+                  </Button>
+                </Link>
+              )}
+              <Button 
+                variant="outline"
+                className="border-2 border-gray-300 hover:border-green-600 text-gray-700 hover:text-green-600 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300"
+              >
+                Pelajari Lebih Lanjut
+              </Button>
+            </div>
           </div>
         </div>
       </section>

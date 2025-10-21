@@ -70,7 +70,7 @@ export default function LoginPage() {
               {error && (
                 <p className="text-sm text-red-500 mt-2">{error}</p>
               )}
-              <Button type="submit" className="w-full bg-[#2563eb] text-white" disabled={isLoading}>
+              <Button type="submit" className="w-full bg-[green-600] text-white" disabled={isLoading}>
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />

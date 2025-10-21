@@ -42,7 +42,7 @@ export default function ProfilePage() {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-[#2563eb] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-[green-600] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading profile...</p>
         </div>
       </div>
@@ -73,10 +73,10 @@ export default function ProfilePage() {
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 p-8 mb-8">
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="relative">
-              <div className="w-24 h-24 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
-                <User className="w-12 h-12 text-[#2563eb]" />
+              <div className="w-24 h-24 rounded-full bg-[green-600]/10 flex items-center justify-center">
+                <User className="w-12 h-12 text-[green-600]" />
               </div>
-              <div className="absolute -bottom-2 -right-2 bg-[#2563eb] text-white text-xs px-2 py-1 rounded-full">
+              <div className="absolute -bottom-2 -right-2 bg-[green-600] text-white text-xs px-2 py-1 rounded-full">
                 Member
               </div>
             </div>
@@ -102,12 +102,12 @@ export default function ProfilePage() {
                 </div>
                 <div className="bg-gray-50 rounded-xl px-4 py-2">
                   <p className="text-sm text-gray-600">Points</p>
-                  <p className="text-lg font-semibold text-[#2563eb]">{points}</p>
+                  <p className="text-lg font-semibold text-[green-600]">{points}</p>
                 </div>
                 {user?.email === 'administrator@gmail.com' && (
                   <button
                     onClick={() => router.push('/dashboard')}
-                    className="bg-[#2563eb] text-white px-6 py-2 rounded-xl hover:bg-[#2563eb]/90 transition-colors"
+                    className="bg-[green-600] text-white px-6 py-2 rounded-xl hover:bg-[green-600]/90 transition-colors"
                   >
                     Dashboard
                   </button>
@@ -127,7 +127,7 @@ export default function ProfilePage() {
           <TabsList className="bg-white/80 backdrop-blur-sm p-1 rounded-2xl shadow-lg border border-gray-200/50">
             <TabsTrigger 
               value="orders"
-              className="data-[state=active]:bg-[#2563eb] data-[state=active]:text-white rounded-lg px-6 py-2.5"
+              className="data-[state=active]:bg-[green-600] data-[state=active]:text-white rounded-lg px-6 py-2.5"
             >
               <Package className="w-5 h-5 mr-2" />
               Orders
@@ -143,7 +143,7 @@ export default function ProfilePage() {
                     <p className="text-gray-500 text-lg">No orders yet</p>
                     <button 
                       onClick={() => router.push('/')}
-                      className="mt-4 px-6 py-2 bg-[#2563eb] text-white rounded-xl hover:bg-[#2563eb]/90 transition-colors duration-200"
+                      className="mt-4 px-6 py-2 bg-[green-600] text-white rounded-xl hover:bg-[green-600]/90 transition-colors duration-200"
                     >
                       Start Shopping
                     </button>
@@ -191,7 +191,7 @@ export default function ProfilePage() {
                         </div>
                         <div>
                           <p className="text-sm text-gray-500">Total Amount</p>
-                          <p className="text-xl font-bold text-[#2563eb]">
+                          <p className="text-xl font-bold text-[green-600]">
                             Rp {order.total.toLocaleString("id-ID")}
                           </p>
                         </div>

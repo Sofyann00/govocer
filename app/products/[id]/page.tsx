@@ -385,12 +385,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 
                 {/* Badges */}
                 <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                  <div className="bg-[#2563eb] text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                  <div className="bg-[green-600] text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
                     <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                     Customer Service 24/7
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-                    <span className="w-2 h-2 bg-[#2563eb] rounded-full"></span>
+                    <span className="w-2 h-2 bg-[green-600] rounded-full"></span>
                     Instant Delivery
                   </div>
                 </div>
@@ -406,7 +406,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <div className="lg:col-span-2">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-[#2563eb]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-[green-600]">
                   <path d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Pilih Nominal Top Up
@@ -455,7 +455,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <div className="lg:col-span-1">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 p-8 sticky top-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-[#2563eb]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-[green-600]">
                   <path fillRule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0118 9.375v9.375a3 3 0 003-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 00-.673-.05A3 3 0 0015 1.5h-1.5a3 3 0 00-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6zM13.5 3A1.5 1.5 0 0012 4.5h4.5A1.5 1.5 0 0015 3h-1.5z" clipRule="evenodd" />
                   <path fillRule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V9.375zM6 12a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V12zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM6 15a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V15zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM6 18a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V18zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75z" clipRule="evenodd" />
                 </svg>
@@ -473,7 +473,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     placeholder="Enter your Player ID"
                     value={playerId}
                     onChange={(e) => setPlayerId(e.target.value)}
-                    className="w-full px-4 py-3 rounded-2xl border border-gray-200/60 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 transition-all duration-300 hover:border-gray-300 focus:bg-white"
+                    className="w-full px-4 py-3 rounded-2xl border border-gray-200/60 focus:border-[green-600] focus:ring-2 focus:ring-[green-600]/20 transition-all duration-300 hover:border-gray-300 focus:bg-white"
                   />
                   <p className="text-xs text-gray-500 mt-2">
                     Simpan ID dengan fitur Save ID
@@ -491,7 +491,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       placeholder="Enter your Server ID"
                       value={serverId}
                       onChange={(e) => setServerId(e.target.value)}
-                      className="w-full px-4 py-3 rounded-2xl border border-gray-200/60 focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 transition-all duration-300 hover:border-gray-300 focus:bg-white"
+                      className="w-full px-4 py-3 rounded-2xl border border-gray-200/60 focus:border-[green-600] focus:ring-2 focus:ring-[green-600]/20 transition-all duration-300 hover:border-gray-300 focus:bg-white"
                     />
                     <p className="text-xs text-gray-500 mt-2">
                       Server ID dapat dilihat di profil game
@@ -509,8 +509,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     className={cn(
                       "w-full p-4 rounded-xl border mb-3 flex items-center justify-between transition-all duration-200",
                       selectedPayment === 'qris'
-                        ? "border-[#2563eb] bg-[#2563eb]/5"
-                        : "border-gray-200 hover:border-[#2563eb]/50 hover:bg-[#2563eb]/5"
+                        ? "border-[green-600] bg-[green-600]/5"
+                        : "border-gray-200 hover:border-[green-600]/50 hover:bg-[green-600]/5"
                     )}
                   >
                     <div className="flex items-center gap-3">
@@ -544,7 +544,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
                 <Button 
                   size="lg" 
-                  className="w-full bg-[#2563eb] hover:bg-[#2563eb]/90 text-white rounded-2xl shadow-lg shadow-[#2563eb]/20 hover:shadow-xl hover:shadow-[#2563eb]/30 transition-all duration-300 hover:-translate-y-0.5"
+                  className="w-full bg-[green-600] hover:bg-[green-600]/90 text-white rounded-2xl shadow-lg shadow-[green-600]/20 hover:shadow-xl hover:shadow-[green-600]/30 transition-all duration-300 hover:-translate-y-0.5"
                   onClick={handleAddToCart}
                 >
                   Konfirmasi Top Up
@@ -604,7 +604,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <Button
                 onClick={handleManualPaymentCheck}
                 disabled={isSendingEmail}
-                className="bg-[#2563eb] hover:bg-[#2563eb]/90 text-white rounded-xl shadow-lg shadow-[#2563eb]/20 hover:shadow-xl hover:shadow-[#2563eb]/30 transition-all duration-300"
+                className="bg-[green-600] hover:bg-[green-600]/90 text-white rounded-xl shadow-lg shadow-[green-600]/20 hover:shadow-xl hover:shadow-[green-600]/30 transition-all duration-300"
               >
                 {isSendingEmail ? (
                   <>

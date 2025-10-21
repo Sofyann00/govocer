@@ -35,10 +35,10 @@ export function RedeemCode({ onPointsUpdate }: RedeemCodeProps) {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:border-[#2563eb]/20 transition-all duration-300">
+    <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:border-[green-600]/20 transition-all duration-300">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-12 h-12 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
-          <Gift className="h-6 w-6 text-[#2563eb]" />
+        <div className="w-12 h-12 rounded-full bg-[green-600]/10 flex items-center justify-center">
+          <Gift className="h-6 w-6 text-[green-600]" />
         </div>
         <div>
           <h2 className="text-2xl font-semibold text-gray-900">Redeem Code</h2>
@@ -52,11 +52,11 @@ export function RedeemCode({ onPointsUpdate }: RedeemCodeProps) {
           placeholder="Enter your code"
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          className="flex-1 h-12 text-base border-gray-200 focus:border-[#2563eb] focus:ring-[#2563eb]/20 transition-all duration-200"
+          className="flex-1 h-12 text-base border-gray-200 focus:border-[green-600] focus:ring-[green-600]/20 transition-all duration-200"
         />
         <Button 
           onClick={handleRedeem} 
-          className="bg-[#2563eb] hover:bg-[#2563eb]/90 text-white h-12 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#2563eb]/20 hover:-translate-y-0.5"
+          className="bg-[green-600] hover:bg-[green-600]/90 text-white h-12 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[green-600]/20 hover:-translate-y-0.5"
         >
           Redeem
         </Button>
@@ -81,7 +81,7 @@ export function RedeemCode({ onPointsUpdate }: RedeemCodeProps) {
                 <h3 className="text-2xl font-semibold text-green-600">Code Valid!</h3>
                 <div className="bg-white rounded-xl p-4 shadow-sm border border-green-100">
                   <p className="text-sm text-gray-500">Points earned</p>
-                  <p className="text-2xl font-bold text-[#2563eb]">{points}</p>
+                  <p className="text-2xl font-bold text-[green-600]">{points}</p>
                 </div>
                 <p className="text-sm text-gray-600 mt-2">
                   {dialogMessage}
@@ -106,7 +106,7 @@ export function RedeemCode({ onPointsUpdate }: RedeemCodeProps) {
           <div className="px-6 pb-6">
             <Button
               onClick={() => setIsDialogOpen(false)}
-              className="w-full bg-[#2563eb] hover:bg-[#2563eb]/90 text-white h-12 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#2563eb]/20 hover:-translate-y-0.5"
+              className="w-full bg-[green-600] hover:bg-[green-600]/90 text-white h-12 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[green-600]/20 hover:-translate-y-0.5"
             >
               {dialogType === 'success' ? (
                 <span className="flex items-center justify-center gap-2">

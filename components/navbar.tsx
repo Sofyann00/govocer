@@ -34,7 +34,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200/50 shadow-lg shadow-blue-500/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200/50 shadow-lg shadow-green-500/5">
       <div className="max-w-7xl mx-auto px-4">
         <div className="h-20 flex items-center justify-between">
           {/* Logo */}
@@ -57,7 +57,7 @@ export function Navbar() {
                 placeholder="Search games..."
                 value={searchQuery}
                 onChange={handleSearch}
-                className="w-64 px-4 py-3 pl-10 bg-gray-50/80 border border-gray-200/60 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 focus:bg-white transition-all duration-300 hover:bg-gray-50"
+                className="w-64 px-4 py-3 pl-10 bg-gray-50/80 border border-gray-200/60 rounded-2xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-600/20 focus:bg-white transition-all duration-300 hover:bg-gray-50"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               
@@ -108,8 +108,8 @@ export function Navbar() {
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <button className="flex items-center gap-2 p-2 hover:bg-gray-50 rounded-xl transition-colors">
-                      <div className="w-8 h-8 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
-                        <User className="h-4 w-4 text-[#2563eb]" />
+                      <div className="w-8 h-8 rounded-full bg-green-600/10 flex items-center justify-center">
+                        <User className="h-4 w-4 text-green-600" />
                       </div>
                       <span className="text-sm font-medium text-gray-700">{user.name}</span>
                     </button>
@@ -137,13 +137,13 @@ export function Navbar() {
                 <>
                   <Link 
                     href="/login"
-                    className="hidden md:flex px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#2563eb] transition-colors"
+                    className="hidden md:flex px-4 py-2 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
                   >
                     Login
                   </Link>
                   <Link
                     href="/register"
-                    className="hidden md:flex px-6 py-2.5 text-sm font-medium text-white bg-[#2563eb] rounded-2xl hover:bg-[#2563eb]/90 hover:shadow-lg hover:shadow-[#2563eb]/25 transition-all duration-300 hover:-translate-y-0.5"
+                    className="hidden md:flex px-6 py-2.5 text-sm font-medium text-white bg-green-600 rounded-2xl hover:bg-green-700 hover:shadow-lg hover:shadow-green-600/25 transition-all duration-300 hover:-translate-y-0.5"
                   >
                     Daftar
                   </Link>
@@ -177,7 +177,7 @@ export function Navbar() {
                 placeholder="Search games..."
                 value={searchQuery}
                 onChange={handleSearch}
-                className="w-full px-4 py-2 pl-10 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#2563eb] focus:ring-2 focus:ring-[#2563eb]/20 transition-all duration-200"
+                className="w-full px-4 py-2 pl-10 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-green-600 focus:ring-2 focus:ring-green-600/20 transition-all duration-200"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               
@@ -257,7 +257,7 @@ export function Navbar() {
                   </Link>
                   <Link
                     href="/register"
-                    className="block px-4 py-2 text-sm font-medium text-white bg-[#2563eb] rounded-xl hover:bg-[#2563eb]/90"
+                    className="block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-xl hover:bg-green-700"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Daftar

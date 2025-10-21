@@ -30,27 +30,27 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-600 hover:text-[#2563eb] transition-colors flex items-center gap-2 group"
+                  className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-2 group"
                 >
-                  <span className="w-1 h-1 bg-[#2563eb] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  <span className="w-1 h-1 bg-green-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   About us
                 </Link>
               </li>
               <li>
                 <Link
                   href="/terms"
-                  className="text-gray-600 hover:text-[#2563eb] transition-colors flex items-center gap-2 group"
+                  className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-2 group"
                 >
-                  <span className="w-1 h-1 bg-[#2563eb] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  <span className="w-1 h-1 bg-green-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Terms & Conditions
                 </Link>
               </li>
               <li>
                 <Link
                   href="/privacy"
-                  className="text-gray-600 hover:text-[#2563eb] transition-colors flex items-center gap-2 group"
+                  className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-2 group"
                 >
-                  <span className="w-1 h-1 bg-[#2563eb] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  <span className="w-1 h-1 bg-green-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Privacy Policy
                 </Link>
               </li>
@@ -64,18 +64,18 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:admin@govocer.com"
-                  className="text-gray-600 hover:text-[#2563eb] transition-colors flex items-center gap-3 group"
+                  className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-3 group"
                 >
-                  <Mail className="w-5 h-5 text-[#2563eb] group-hover:scale-110 transition-transform" />
+                  <Mail className="w-5 h-5 text-green-600 group-hover:scale-110 transition-transform" />
                   admin@govocer.com
                 </a>
               </li>
               <li>
                 <a
                   href="https://wa.me/6285811959392"
-                  className="text-gray-600 hover:text-[#2563eb] transition-colors flex items-center gap-3 group"
+                  className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-3 group"
                 >
-                  <Phone className="w-5 h-5 text-[#2563eb] group-hover:scale-110 transition-transform" />
+                  <Phone className="w-5 h-5 text-green-600 group-hover:scale-110 transition-transform" />
                   085811959392
                 </a>
               </li>
