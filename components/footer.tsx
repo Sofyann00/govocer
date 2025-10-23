@@ -54,6 +54,24 @@ export function Footer() {
                   Privacy Policy
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/refund-policy"
+                  className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-2 group"
+                >
+                  <span className="w-1 h-1 bg-green-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Refund Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/seller-terms"
+                  className="text-gray-600 hover:text-green-600 transition-colors flex items-center gap-2 group"
+                >
+                  <span className="w-1 h-1 bg-green-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Syarat Seller
+                </Link>
+              </li>
             </ul>
           </div>
 

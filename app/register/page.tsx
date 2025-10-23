@@ -31,6 +31,7 @@ export default function RegisterPage() {
     phoneNumber: "",
     bankAccountNumber: "",
     bankName: "",
+    userType: "buyer", // "buyer" or "seller"
   })
   const [banks, setBanks] = useState<Bank[]>([])
   const [error, setError] = useState("")
@@ -70,7 +71,8 @@ export default function RegisterPage() {
         formData.password,
         parseInt(formData.phoneNumber),
         formData.bankAccountNumber,
-        formData.bankName
+        formData.bankName,
+        formData.userType as "buyer" | "seller"
       )
       router.push("/profile")
     } catch (err) {
@@ -89,6 +91,65 @@ export default function RegisterPage() {
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* User Type Selection */}
+              <div>
+                <label className="block mb-3 text-sm font-medium text-gray-700">Daftar sebagai:</label>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setFormData({ ...formData, userType: "buyer" })}
+                    className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                      formData.userType === "buyer"
+                        ? "border-green-600 bg-green-50 text-green-700"
+                        : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
+                    }`}
+                  >
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">🛒</div>
+                      <div className="font-semibold">Buyer</div>
+                      <div className="text-xs text-gray-500 mt-1">Beli voucher game</div>
+                    </div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setFormData({ ...formData, userType: "seller" })}
+                    className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                      formData.userType === "seller"
+                        ? "border-green-600 bg-green-50 text-green-700"
+                        : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
+                    }`}
+                  >
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">💰</div>
+                      <div className="font-semibold">Seller</div>
+                      <div className="text-xs text-gray-500 mt-1">Jual voucher game</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              {/* Seller Terms Link */}
+              {formData.userType === "seller" && (
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 text-blue-600 mt-0.5">ℹ️</div>
+                    <div>
+                      <h4 className="font-semibold text-blue-800 mb-2">Informasi Penting untuk Seller</h4>
+                      <p className="text-blue-700 text-sm mb-3">
+                        Sebagai seller, Anda perlu melalui proses verifikasi (KYC) dan menyetujui syarat & ketentuan khusus.
+                      </p>
+                      <Link 
+                        href="/seller-terms" 
+                        target="_blank"
+                        className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm font-medium"
+                      >
+                        Baca Syarat & Ketentuan Seller →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               <div>
                 <label className="block mb-2">Name</label>
                 <Input
@@ -187,7 +248,7 @@ export default function RegisterPage() {
               {error && (
                 <p className="text-sm text-red-500 mt-2">{error}</p>
               )}
-              <Button type="submit" className="w-full bg-[green-600] text-white" disabled={isLoading}>
+              <Button type="submit" className="w-full bg-green-600 text-white" disabled={isLoading}>
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />

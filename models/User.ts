@@ -26,6 +26,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  userType: {
+    type: String,
+    enum: ['buyer', 'seller'],
+    default: 'buyer'
+  },
   orders: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Order'

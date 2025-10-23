@@ -466,15 +466,23 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-6">Masih punya pertanyaan?</p>
-            <a
-              href="https://wa.me/6285811959392"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 bg-white text-green-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1"
-            >
-              <img src="/wa_img.png" alt="WhatsApp" className="w-5 h-5 filter-green" />
-              Chat dengan Kami
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://wa.me/6285811959392"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-white text-green-600 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1"
+              >
+                <img src="/wa_img.png" alt="WhatsApp" className="w-5 h-5 filter-green" />
+                Chat dengan Kami
+              </a>
+              <Link
+                href="/refund-policy"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 hover:-translate-y-1"
+              >
+                Kebijakan Refund
+              </Link>
+            </div>
           </div>
         </div>
       </section>

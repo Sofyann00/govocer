@@ -10,6 +10,7 @@ type User = {
   phoneNumber: number;
   bankAccountNumber: string;
   bankName: string;
+  userType: "buyer" | "seller";
   orders: Order[];
 };
 
@@ -34,7 +35,7 @@ type OrderItem = {
 type UserContextType = {
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
-  register: (name: string, email: string, password: string, phoneNumber: number, bankAccountNumber: string, bankName: string) => Promise<void>;
+  register: (name: string, email: string, password: string, phoneNumber: number, bankAccountNumber: string, bankName: string, userType: "buyer" | "seller") => Promise<void>;
   logout: () => void;
   addOrder: (
     order: Omit<Order, "id" | "date"> & { id?: string; date?: string }
@@ -96,7 +97,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     password: string,
     phoneNumber: number,
     bankAccountNumber: string,
-    bankName: string
+    bankName: string,
+    userType: "buyer" | "seller"
   ) => {
     const response = await fetch('/api/auth/register', {
       method: 'POST',
@@ -109,7 +111,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         password,
         phoneNumber,
         bankAccountNumber,
-        bankName
+        bankName,
+        userType
       }),
     })
 
